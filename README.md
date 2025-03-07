@@ -2,7 +2,7 @@
 
 A modern web application that identifies the theme being used on any Shopify store. This tool helps developers, designers, and e-commerce professionals analyze Shopify stores quickly and accurately.
 
-![Shopify Theme Detector Demo](./Demo/ThemeDetector.mp4)
+![Shopify Theme Detector Demo](./Demo/ShopifyThemeDetector.mp4)
 
 ## Features
 

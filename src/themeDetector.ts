@@ -1,4 +1,4 @@
-const PROXY_URL = "http://localhost:3001/api/fetch"; // Update with your actual proxy URL
+const PROXY_URL = "http://localhost:3001/api/fetch";
 
 interface ShopifyTheme {
     name: string;
@@ -39,8 +39,6 @@ export async function detectShopifyTheme(url: string): Promise<ThemeDetectionRes
         }
 
         try {
-            // Parse the theme JSON object
-            // We need to convert the JS object notation to valid JSON by adding quotes around property names
             const themeJsonString: string = themeMatch[1].replace(
                 /([a-zA-Z0-9_]+):/g,
                 '"$1":'
