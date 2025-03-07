@@ -11,7 +11,6 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-
   const handleDetectTheme = async (url: string): Promise<void> => {
     setLoading(true);
     setError(null);
@@ -28,15 +27,23 @@ function App() {
   };
 
   return (
-    <div className="app-container">
-      <div className="detector-card">
-        <h1 className="app-title">Shopify Theme Detector</h1>
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto">
+        <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+          <h1 className="text-2xl font-bold text-center text-gray-800 mb-8">
+            Shopify Theme Detector
+          </h1>
 
-        <ThemeDetectorForm onSubmit={handleDetectTheme} />
+          <ThemeDetectorForm onSubmit={handleDetectTheme} />
 
-        {loading && <LoadingIndicator />}
-        {error && <ErrorMessage message={error} />}
-        {themeData && <ThemeResultDisplay themeData={themeData} />}
+          {loading && <LoadingIndicator />}
+          {error && <ErrorMessage message={error} />}
+          {themeData && <ThemeResultDisplay themeData={themeData} />}
+        </div>
+
+        <div className="mt-6 text-center text-sm text-gray-500">
+          Detect any Shopify store's theme with ease
+        </div>
       </div>
     </div>
   );
